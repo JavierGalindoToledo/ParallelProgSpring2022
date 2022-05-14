@@ -1,9 +1,16 @@
 // Copyright 2022 Javier Galindo
 
+<<<<<<< HEAD
 #include "../../../modules/task_2/galindo_fox_algorithm_omp/galindo_fox_algorithm_omp.h"
 #include <omp.h>
 
 bool isEqual(double x, double y) {
+=======
+#include "../../../modules/task_1/galindo_fox_algorithm/galindo_fox_algorithm.h"
+#include <omp.h>
+
+bool is_equal(double x, double y) {
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
     return std::fabs(x - y) < 0.001;
 }
 
@@ -14,7 +21,11 @@ bool isEqualMatrix(Matrix A, Matrix B) {
         throw "Matrices are of different size";
     size_t size = A.size();
     for (size_t i = 0; i < size; i++)
+<<<<<<< HEAD
          if (!isEqual(A[i], B[i]))
+=======
+         if (!is_equal(A[i], B[i]))
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
               return false;
     return true;
 }
@@ -43,8 +54,13 @@ Matrix createRandomMatrix(size_t size) {
     return result;
 }
 
+<<<<<<< HEAD
 Matrix sequentialMatrixMultiplication(const std::vector<double>& A,
     const std::vector<double> B, size_t Size) {
+=======
+Matrix sequentialMatrixMultiplication(std::vector<double> A,
+    std::vector<double> B, size_t Size) {
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
     if (Size <= 0) {
     throw "Block size must be more than 0";
     }
@@ -67,8 +83,13 @@ Matrix sequentialMatrixMultiplication(const std::vector<double>& A,
     return result;
 }
 
+<<<<<<< HEAD
 Matrix sequentialBlockMatrixMultiplication(const std::vector<double>& A,
     const std::vector<double> B, size_t Size) {
+=======
+Matrix sequentialBlockMatrixMultiplication(std::vector<double> A,
+    std::vector<double> B, size_t Size) {
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
     if (Size <= 0) {
         throw "Block size must be more than 0";
     }
@@ -88,9 +109,15 @@ Matrix sequentialBlockMatrixMultiplication(const std::vector<double>& A,
     size_t BlockSize =
         static_cast<size_t>(sqrt(Size));
     size_t BlockCount =
+<<<<<<< HEAD
         static_cast<size_t>(BlockSize/static_cast<size_t>(sqrt(4))) == 0
                           ? 1 : static_cast<size_t>
         (BlockSize/static_cast<size_t>(sqrt(4)));
+=======
+        static_cast<size_t>(BlockSize/static_cast<size_t>(sqrt(pNum))) == 0
+                          ? 1 : static_cast<size_t>
+        (BlockSize/static_cast<size_t>(sqrt(pNum)));
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
     Matrix result(BlockSize * BlockSize, 0);
     for (size_t i = 0; i < BlockSize;
         i += BlockCount)

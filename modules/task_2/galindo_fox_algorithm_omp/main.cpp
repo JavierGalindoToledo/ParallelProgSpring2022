@@ -106,6 +106,7 @@ TEST(Javier_Galindo_Omp, Test_4_On_4_Matrix_Mult) {
     ASSERT_TRUE(isEqualMatrix(C_my_result, C));
 }
 
+<<<<<<< HEAD
 TEST(Javier_Galindo_Omp, Test_1_on_1_Some_Matrix_Mult) {
     Matrix A = { 1 };
     Matrix B(A);
@@ -157,6 +158,8 @@ TEST(Javier_Galindo_Omp, Test_8_on_8_Identity_on_Random_Matrix_Mult) {
     ASSERT_EQ(B, C);
 }
 
+=======
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
 TEST(Javier_Galindo_Omp, Test_4_on_4_Random_Matrix_Mult) {
     size_t size = 4;
     Matrix A = createRandomMatrix(size * size);
@@ -170,6 +173,7 @@ TEST(Javier_Galindo_Omp, Test_4_on_4_Random_Matrix_Mult) {
     ASSERT_TRUE(isEqualMatrix(C, C_block));
 }
 
+<<<<<<< HEAD
 TEST(Javier_Galindo_Omp, Test_8_on_8_Random_Matrix_Mult) {
     size_t size = 8;
     Matrix A = createRandomMatrix(size * size);
@@ -183,6 +187,8 @@ TEST(Javier_Galindo_Omp, Test_8_on_8_Random_Matrix_Mult) {
     ASSERT_TRUE(isEqualMatrix(C, C_block));
 }
 
+=======
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
 TEST(Javier_Galindo_Omp, Test_50_on_50_Random_Matrix_Mult) {
     size_t size = 50;
     Matrix A = createRandomMatrix(size * size);
@@ -196,7 +202,11 @@ TEST(Javier_Galindo_Omp, Test_50_on_50_Random_Matrix_Mult) {
     t_count = 1;
     omp_set_num_threads(t_count);
     double t3 = omp_get_wtime();
+<<<<<<< HEAD
     Matrix C_block = sequentialBlockMatrixMultiplication(A, B, size * size);
+=======
+    Matrix C_block = parallelBlockMatrixMultiplication(A, B, size * size);
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
     double t4 = omp_get_wtime();
     std::cout << "Seq: " << t4 - t3 << std::endl;
     std::cout << (t4 - t3) / (t2 - t1);
@@ -204,4 +214,7 @@ TEST(Javier_Galindo_Omp, Test_50_on_50_Random_Matrix_Mult) {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ee29a423ea05ad6ca04e6dbca63203a76d981d7
