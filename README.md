@@ -12,4 +12,4 @@ Fox algorithm: This algorithm breaks the input matrices down into blocks and com
      -  `task_1\galindo_fox_algorithm` MPI version.
      -  `task_2\galindo_fox_algorithm_omp` OpenMP version.
      -  `task_1\galindo_fox_algorithm_tbb` Threading building blocks (TBB) version.
-     -  `task_1\galindo_fox_algorithm_thread` Thread class versino.
+     -  `task_1\galindo_fox_algorithm_thread` Thread class version.
